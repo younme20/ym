@@ -1,12 +1,14 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!doctype html>
 <html>
 <head>
-	<title>Home</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>GIT TEST</title>
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="resources/app.css">
+  <script type="text/javascript" src="libs/angular/angular.js"></script>
 </head>
 <body>
-<h1>
-	2020 06 21 커밋
-</h1>
-</body>
+  2016.06.21 페이지수정
+<body>
 </html>
