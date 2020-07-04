@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>
-2020.07.04 마스터 브랜치 Bang04 브랜치에 병합
+2020.07.04  commit 2차  test
 </h1>
 </body>
 </html>
