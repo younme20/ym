@@ -10,6 +10,6 @@
   <script type="text/javascript" src="libs/angular/angular.js"></script>
 </head>
 <body>
-  2020-07-04 수정
+  2020-07-04 gitignore 파일 추가 후 새로 커밋
 <body>
 </html>
