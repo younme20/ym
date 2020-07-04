@@ -1,12 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Home</title>
-</head>
-<body>
-<h1>
-2020.07.04  commit 2차  test
-</h1>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+  </body>
 </html>
