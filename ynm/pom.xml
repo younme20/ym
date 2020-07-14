@@ -110,6 +110,7 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		
 		<!-- mybatis -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
@@ -161,6 +162,7 @@
 		    <artifactId>tiles-api</artifactId>
 		    <version>${org.apache.tiles-version}</version>
     </dependency>
+    
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
