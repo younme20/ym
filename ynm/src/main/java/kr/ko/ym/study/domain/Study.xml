@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="study">
+
+
+	<select id="selectList" parameterType="hashmap" resultType="hashmap"> 
+		<![CDATA[ 
+			SELECT IDX
+				 , TITLE
+				 , HITCNT
+				 , CREATE_DATETIME 
+			  FROM board 
+			 ORDER BY IDX DESC 
+		]]> 
+	</select>
+	
+	<select id="selectDetail" parameterType="hashmap" resultType="hashmap"> 
+		<![CDATA[ 
+			SELECT IDX
+				 , TITLE
+				 , CONTENTS
+				 , HITCNT
+				 , CREATE_ID
+				 , CREATE_DATETIME 
+			  FROM board 
+			 WHERE IDX = #{IDX}  
+		]]> 
+	</select>
+
+
+</mapper>

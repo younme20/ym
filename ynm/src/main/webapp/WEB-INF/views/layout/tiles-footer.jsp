@@ -8,6 +8,6 @@
 	<title>Insert title here</title>
 </head>
 <body>
-	footer page
+	<!-- footer page -->
 </body>
 </html>
