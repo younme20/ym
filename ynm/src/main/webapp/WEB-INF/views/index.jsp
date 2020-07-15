@@ -4,12 +4,9 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <title>GIT TEST</title>
-  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="resources/app.css">
-  <script type="text/javascript" src="libs/angular/angular.js"></script>
+  <title>스터디 과정 등록 게시판</title>
 </head>
 <body>
-main page
+	게시판 목록
 <body>
 </html>
