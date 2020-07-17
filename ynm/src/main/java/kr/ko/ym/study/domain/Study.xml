@@ -8,7 +8,7 @@
 			SELECT IDX
 				 , TITLE
 				 , HITCNT
-				 , CREATE_DATETIME 
+				 , DATE_FORMAT(NOW(), '%y/%m/%d') AS  CREATE_DATETIME
 			  FROM board 
 			 ORDER BY IDX DESC 
 		]]> 
@@ -21,11 +21,38 @@
 				 , CONTENTS
 				 , HITCNT
 				 , CREATE_ID
-				 , CREATE_DATETIME 
+				 , DATE_FORMAT(NOW(), '%y/%m/%d') AS  CREATE_DATETIME 
 			  FROM board 
 			 WHERE IDX = #{IDX}  
 		]]> 
 	</select>
+	
+    <insert id="insertBoard" parameterType="hashmap">
+        <selectKey keyProperty="IDX" resultType="int">
+        	SELECT MAX(IDX) + 1 FROM board
+        </selectKey>
+        INSERT INTO board
+             ( IDX, TITLE, CONTENTS, CREATE_ID, CREATE_DATETIME   
+             )
+        VALUES
+             ( #{IDX}, #{TITLE}, #{CONTENTS}, 'testid', SYSDATE()
+             
+             ) 
+    </insert>
+    
+    <update id="updateBoard" parameterType="hashmap">
+        UPDATE board
+           SET TITLE = #{TITLE}
+             , CONTENTS = #{CONTENTS}
+             , UPDATE_ID = 'testid2'
+             , UPDATE_DATETIME = SYSDATE()
+         WHERE IDX = #{IDX}
+    </update>
+    
+    <delete id="deleteBoard" parameterType="hashmap">
+        DELETE FROM board
+         WHERE IDX = #{IDX}
+    </delete>
 
 
 </mapper>

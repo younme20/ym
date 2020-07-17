@@ -36,7 +36,7 @@ public class CommonDao {
 		return sqlSession.selectOne(queryId); 
 	} 
 	
-	public Map selectOne(String queryId, Object params){ 
+	public Map<String,Object> selectOne(String queryId, Object params){ 
 		//printQueryId(queryId); 
 		return sqlSession.selectOne(queryId, params); 
 	} 

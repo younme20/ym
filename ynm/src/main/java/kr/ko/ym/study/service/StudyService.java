@@ -9,4 +9,10 @@ public interface StudyService {
 
 	Map<String,Object> selectDetail(Map<String, Object> param) throws Exception;
 
+	Object insertBoard(Map<String, Object> param) throws Exception;
+
+	void updateBoard(Map<String, Object> param) throws Exception;
+
+	void deleteBoard(Map<String, Object> param) throws Exception;
+
 }

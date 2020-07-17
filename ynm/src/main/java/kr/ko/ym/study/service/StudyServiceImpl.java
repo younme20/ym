@@ -1,5 +1,6 @@
 package kr.ko.ym.study.service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,7 +24,27 @@ public class StudyServiceImpl implements StudyService {
 	@SuppressWarnings("unchecked")
 	@Override
 	public Map<String, Object> selectDetail(Map<String, Object> param) throws Exception {
-		return commonDao.selectOne("study.selectDetail", param);
+		Map<String,Object>map = new HashMap<String,Object>();
+		if(commonDao.selectOne("study.selectDetail", param) != null) {
+			map = commonDao.selectOne("study.selectDetail", param);
+		}
+		return map;
+	}
+
+	@Override
+	public Object insertBoard(Map<String, Object> param) throws Exception {
+		commonDao.insert("study.insertBoard", param);	
+		return param;
+	}
+
+	@Override
+	public void updateBoard(Map<String, Object> param) throws Exception {
+		commonDao.update("study.updateBoard", param);			
+	}
+
+	@Override
+	public void deleteBoard(Map<String, Object> param) throws Exception {
+		commonDao.delete("study.deleteBoard", param);			
 	}
 
 }

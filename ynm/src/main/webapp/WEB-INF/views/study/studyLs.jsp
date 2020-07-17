@@ -6,15 +6,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/ui.css'/>" />
-<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css"> -->
 <!-- jQuery --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
 <script src="<c:url value='/resources/js/common/common.js'/>" charset="utf-8"></script>
-<script src="<c:url value='/resources/js/study/study.js'/>" charset="utf-8"></script>
+<script src="<c:url value='/resources/js/study/studyLs.js'/>" charset="utf-8"></script>
 </head>
 <body>
 	<h2>스터디 관리 게시판 목록</h2>
-	<button id="btnWrite" type="button" class="btn btn_left">글쓰기</button>
+	<button id="btnWrite" type="button" class="btn btn_left" length="${fn:length(list)}">글쓰기</button>
 	<table class="board_list">
 		<colgroup>
 			<col width="10%"/>
@@ -33,12 +33,11 @@
 		<tbody>
 			<c:choose>
 				<c:when test="${fn:length(list) > 0}">
-					<c:forEach items="${list }" var="row">
+					<c:forEach items="${list}" var="row">
 						<tr>
-							<td>${row.IDX }</td>
+							<td>${row.IDX}</td>
 							<td class="title">
-								<a href="#this" name="title">${row.TITLE }</a>
-								<input type="hidden" id="IDX" value="${row.IDX }">
+								<a href="#this" name="title" idx="${row.IDX}">${row.TITLE}</a>
 							</td>
 							<td>${row.HITCNT }</td>
 							<td>${row.CREATE_DATETIME }</td>
